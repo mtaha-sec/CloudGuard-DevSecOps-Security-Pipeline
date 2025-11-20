@@ -27,15 +27,15 @@ This project implements a robust, automated CI/CD pipeline focused on integratin
 
 | Component           | Tools / Services                    |
 |---------------------|-----------------------------------|
-| :page_facing_up: Source Code         | GitHub                            |
-| :gear: CI/CD Pipeline      | GitHub Actions                    |
-| :mag: Static Analysis     | SonarQube                        |
-| :hammer_and_wrench: Dependency Scanning | Snyk                             |
-| :male_detective: Dynamic Testing     | Burp Suite Community Edition      |
-| :whale: Containerization    | Docker                           |
-| :cloud: Cloud Infrastructure | AWS (ECS / EKS)                   |
-| :building_construction: Infrastructure as Code | Terraform                        |
-| :email: Notifications       | Email                            |
+| <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="20"/> Source Code         | GitHub                            |
+| <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Actions-Logo.png" width="20"/> CI/CD Pipeline      | GitHub Actions                    |
+| <img src="https://www.sonarqube.org/wp-content/uploads/2018/04/SonarQube-logo-vertical.png" width="80"/> Static Analysis     | SonarQube                        |
+| <img src="https://cdn.snyk.io/logo/snyk-icon-color.svg" width="20"/> Dependency Scanning | Snyk                             |
+| <img src="https://portswigger.net/burp/images/burp-suite-logo.png" width="60"/> Dynamic Testing     | Burp Suite Community Edition      |
+| <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" width="40"/> Containerization    | Docker                           |
+| <img src="https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png" width="40"/> Cloud Infrastructure | AWS (ECS / EKS)                   |
+| <img src="https://www.terraform.io/assets/images/logo-hashicorp-terraform.svg" width="40"/> Infrastructure as Code | Terraform                        |
+| <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" width="20"/> Notifications       | Email                            |
 
 
 ---
