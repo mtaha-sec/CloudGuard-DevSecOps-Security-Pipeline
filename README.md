@@ -10,18 +10,18 @@ This project implements a robust, automated CI/CD pipeline focused on integratin
 
 ---
 
-## Key Features
+| Component           | Tools / Services                    |
+|---------------------|-----------------------------------|
+| :octocat: Source Code         | GitHub                            |
+| ⚙️ CI/CD Pipeline      | GitHub Actions                    |
+| 🔍 Static Analysis     | SonarQube                        |
+| 🛠️ Dependency Scanning | Snyk                             |
+| 🕵️‍♂️ Dynamic Testing     | Burp Suite Community Edition      |
+| :whale: Containerization    | Docker                           |
+| :cloud: Cloud Infrastructure | AWS (ECS / EKS)                   |
+| 🏗 Infrastructure as Code | Terraform                        |
+| 📧 Notifications       | Email                            |
 
-- **Automated Code Security:** Static Application Security Testing (SAST) with SonarQube  
-- **Dependency Vulnerability Scanning:** Software Composition Analysis (SCA) with Snyk  
-- **Dynamic Security Testing:** Dynamic Application Security Testing (DAST) using Burp Suite  
-- **Infrastructure as Code (IaC):** AWS infrastructure provisioned with Terraform (ECS/EKS, IAM, networking)  
-- **Containerization:** Docker to build and package the application  
-- **CI/CD Automation:** GitHub Actions to orchestrate build, test, scan, and deploy workflows  
-- **Security Gates:** Block deployments if critical vulnerabilities are found  
-- **Alerting:** Email notifications on security issues  
-
----
 
 ## Technology Stack
 
