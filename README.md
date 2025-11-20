@@ -27,15 +27,16 @@ This project implements a robust, automated CI/CD pipeline focused on integratin
 
 | Component           | Tools / Services                    |
 |---------------------|-----------------------------------|
-| Source Code         | GitHub                            |
-| CI/CD Pipeline      | GitHub Actions                    |
-| Static Analysis     | SonarQube                        |
-| Dependency Scanning | Snyk                             |
-| Dynamic Testing     | Burp Suite Community Edition      |
-| Containerization    | Docker                           |
-| Cloud Infrastructure | AWS (ECS / EKS)                   |
-| Infrastructure as Code | Terraform                        |
-| Notifications       | Email                            |
+| :page_facing_up: Source Code         | GitHub                            |
+| :gear: CI/CD Pipeline      | GitHub Actions                    |
+| :mag: Static Analysis     | SonarQube                        |
+| :hammer_and_wrench: Dependency Scanning | Snyk                             |
+| :male_detective: Dynamic Testing     | Burp Suite Community Edition      |
+| :whale: Containerization    | Docker                           |
+| :cloud: Cloud Infrastructure | AWS (ECS / EKS)                   |
+| :building_construction: Infrastructure as Code | Terraform                        |
+| :email: Notifications       | Email                            |
+
 
 ---
 
