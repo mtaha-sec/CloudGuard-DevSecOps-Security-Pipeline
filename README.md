@@ -35,9 +35,5 @@ Clone the repository and explore the folder structure to understand the modular 
 
 ---
 
-## License
 
-[Insert your license info here]
-
----
 
