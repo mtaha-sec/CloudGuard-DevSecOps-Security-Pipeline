@@ -27,13 +27,7 @@ This project implements a robust, automated CI/CD pipeline focused on integratin
 - Build GitHub Actions pipeline for automated testing and deployment  
 - Integrate security testing tools and alerts  
 
----
 
-## Getting Started
-
-Clone the repository and explore the folder structure to understand the modular design of this DevSecOps pipeline.
-
----
 
 
 
