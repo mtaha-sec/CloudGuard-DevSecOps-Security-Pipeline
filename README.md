@@ -8,37 +8,17 @@
 
 This project implements a robust, automated CI/CD pipeline focused on integrating security at every stage of the software development lifecycle (DevSecOps). It leverages industry-standard tools and cloud technologies to ensure secure and reliable delivery of containerized applications.
 
----
+## 🛠️ **Tools & Services Used**
 
-| Component           | Tools / Services                    |
-|---------------------|-----------------------------------|
-| :octocat: Source Code         | GitHub                            |
-| ⚙️ CI/CD Pipeline      | GitHub Actions                    |
-| 🔍 Static Analysis     | SonarQube                        |
-| 🛠️ Dependency Scanning | Snyk                             |
-| 🕵️‍♂️ Dynamic Testing     | Burp Suite Community Edition      |
-| :whale: Containerization    | Docker                           |
-| :cloud: Cloud Infrastructure | AWS (ECS / EKS)                   |
-| 🏗 Infrastructure as Code | Terraform                        |
-| 📧 Notifications       | Email                            |
-
-
-## Technology Stack
-
-| Component           | Tools / Services                    |
-|---------------------|-----------------------------------|
-| <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="20"/> Source Code         | GitHub                            |
-| <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Actions-Logo.png" width="20"/> CI/CD Pipeline      | GitHub Actions                    |
-| <img src="https://www.sonarqube.org/wp-content/uploads/2018/04/SonarQube-logo-vertical.png" width="80"/> Static Analysis     | SonarQube                        |
-| <img src="https://cdn.snyk.io/logo/snyk-icon-color.svg" width="20"/> Dependency Scanning | Snyk                             |
-| <img src="https://portswigger.net/burp/images/burp-suite-logo.png" width="60"/> Dynamic Testing     | Burp Suite Community Edition      |
-| <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" width="40"/> Containerization    | Docker                           |
-| <img src="https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png" width="40"/> Cloud Infrastructure | AWS (ECS / EKS)                   |
-| <img src="https://www.terraform.io/assets/images/logo-hashicorp-terraform.svg" width="40"/> Infrastructure as Code | Terraform                        |
-| <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" width="20"/> Notifications       | Email                            |
-
-
----
+| **Category**       | **Tools**                                                                                                                                                                                                 |
+|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Version Control** | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)                                                                                                       |
+| **CI/CD**           | ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white)                                                                                                    |
+| **Code Quality**    | ![SonarQube](https://img.shields.io/badge/SonarQube-4E9BCD?style=flat-square&logo=sonarqube&logoColor=white)                                                                                              |
+| **Containerization**| ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)                                                                                                       |
+| **Orchestration**   | ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)                                                                                          |
+| **Monitoring**      | ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white) ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white) |
+| **Security**        | ![OWASP](https://img.shields.io/badge/OWASP-000000?style=flat-square&logo=owasp&logoColor=white) ![Trivy](https://img.shields.io/badge/Trivy-00979D?style=flat-square&logo=trivy&logoColor=white)         |
 
 ## Next Steps
 
@@ -46,18 +26,8 @@ This project implements a robust, automated CI/CD pipeline focused on integratin
 - Configure Terraform to provision AWS infrastructure  
 - Build GitHub Actions pipeline for automated testing and deployment  
 - Integrate security testing tools and alerts  
+-
 
----
 
-## Getting Started
 
-Clone the repository and explore the folder structure to understand the modular design of this DevSecOps pipeline.
-
----
-
-## License
-
-[Insert your license info here]
-
----
 
