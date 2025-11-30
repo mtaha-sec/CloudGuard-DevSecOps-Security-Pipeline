@@ -1,0 +1,27 @@
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  stage: build
+  image: node:18-alpine
+  script:
+    - cd app/src
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - app/src/.next/
+
+test:
+  stage: test
+  image: node:18-alpine
+  script:
+    - cd app/src
+    - npm test
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploy steps here"
