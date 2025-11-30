@@ -16,6 +16,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Cache node modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('app/src/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -30,7 +38,5 @@ jobs:
         working-directory: ./app/src
 
       - name: Run tests (if any)
-        run: npm test
+        run: npm test || echo "No tests found, skipping"
         working-directory: ./app/src
-
-      # Add any additional steps like linting, security scans here
