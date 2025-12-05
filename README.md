@@ -26,7 +26,7 @@ This project implements a robust, automated CI/CD pipeline focused on integratin
 - Configure Terraform to provision AWS infrastructure  
 - Build GitHub Actions pipeline for automated testing and deployment  
 - Integrate security testing tools and alerts  
--
+
 
 
 
