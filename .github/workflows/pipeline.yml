@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-secure:
     runs-on: ubuntu-latest
 
     steps:
@@ -40,3 +40,70 @@ jobs:
       - name: Run tests (if any)
         run: npm test || echo "No tests found, skipping"
         working-directory: ./app/src
+
+      # ---------------------------
+      # SonarQube - SAST
+      # ---------------------------
+      - name: Run SonarQube Scanner (SAST)
+        uses: sonarsource/sonarqube-scan-action@v2
+        with:
+          projectBaseDir: ./app/src
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+
+      # ---------------------------
+      # Snyk - SCA
+      # ---------------------------
+      - name: Snyk Security Scan (SCA)
+        uses: snyk/actions/node@master
+        with:
+          args: test --json-file-output=./docs/security-reports/sca-report.json
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+
+      # ---------------------------
+      # Docker Build & Run Container
+      # ---------------------------
+      - name: Build Docker image
+        run: docker build -t myapp:latest ./app
+
+      - name: Run container on port 3000 for staging
+        run: docker run -d -p 3000:3000 --name myapp_test myapp:latest
+
+      # ---------------------------
+      # Burp Suite - DAST
+      # ---------------------------
+      - name: Run Burp Suite (DAST)
+        run: |
+          chmod +x ./ci-cd/burp/burp-launch.sh
+          ./ci-cd/burp/burp-launch.sh http://localhost:3000
+
+      # ---------------------------
+      # Upload Burp Report
+      # ---------------------------
+      - name: Upload Burp DAST report
+        uses: actions/upload-artifact@v3
+        with:
+          name: dast-report
+          path: ./docs/security-reports/dast-report.html
+
+      # ---------------------------
+      # Stop and remove test container
+      # ---------------------------
+      - name: Stop and remove container
+        run: |
+          docker stop myapp_test
+          docker rm myapp_test
+
+      # ---------------------------
+      # Fail if Critical Vulnerabilities Found (Burp)
+      # ---------------------------
+      - name: Block deployment if Critical found
+        run: |
+          python3 ./ci-cd/burp/report-parser.py ./docs/security-reports/dast-report.html
+          if [ $? -ne 0 ]; then
+            echo "Critical vulnerabilities found ❌ blocking deployment!"
+            exit 1
+          fi
+
